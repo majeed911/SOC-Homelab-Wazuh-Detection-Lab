@@ -52,6 +52,13 @@ Detect multiple failed Windows logon attempts using Wazuh.
 
 - T1110 – Brute Force
 
+- ## Detection Alert
+
+![Brute Force Alert](images/brute-force-alert)
+
+## Failed Logon Events
+
+![Failed Logons](images/brute-force-events)
 ---
 
 ## Upcoming Detection Labs

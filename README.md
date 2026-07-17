@@ -1,14 +1,10 @@
-# SOC-Homelab-Wazuh-Detection-Lab
-SOC Homelab using Wazuh and Sysmon for Detection Engineering.
-
-
-# 🛡️ SOC Homelab - Wazuh Detection Lab
+# SOC Homelab - Wazuh Detection Lab
 
 ## Overview
 
-This project demonstrates a Security Operations Center (SOC) homelab built using Wazuh and Sysmon to detect and investigate Windows security events.
+This project demonstrates a SOC homelab built using Wazuh and Sysmon for Windows security monitoring.
 
-The lab simulates real-world attacker techniques and validates custom detection rules using Wazuh.
+The objective is to detect Windows brute-force login attempts by creating a custom Wazuh detection rule.
 
 ---
 
@@ -16,74 +12,67 @@ The lab simulates real-world attacker techniques and validates custom detection 
 
 - Windows 10
 - Ubuntu Server
-- Wazuh Manager 4.12
-- Wazuh Agent
+- Wazuh Manager
+- Wazuh Dashboard
 - Sysmon
 - VirtualBox
 
 ---
 
-## Detection Use Cases
+## Attack Simulation
 
-### ✅ PowerShell launching CMD
+The following attack was simulated:
 
-- Windows Event ID: Sysmon Event ID 1
-- MITRE ATT&CK: T1059.001
-- Detection: Custom Wazuh Rule
-
----
-
-### ✅ Local Administrator Group Modification
-
-Detects when a user is added to the local Administrators group.
-
-Example:
-
-```
-net localgroup administrators hacker /add
-```
-
-MITRE ATT&CK:
-- T1484
+- Multiple failed Windows logon attempts (Event ID 4625)
+- Custom Wazuh rule triggered after repeated failures
+- High severity alert generated
 
 ---
 
-### ✅ Brute Force Detection
+## Detection Logic
 
-Custom correlation rule that detects multiple failed logon attempts.
+The custom rule detects:
 
-Conditions:
+- Five failed logon events
+- Within sixty seconds
+- Generates a Level 12 alert
 
-- 5 failed logins
-- within 60 seconds
+MITRE ATT&CK
 
-Generated Alert:
-
-```
-Possible Brute Force Attack Detected
-```
-
-MITRE ATT&CK:
-
-- T1110
+- T1110 - Brute Force
 
 ---
 
-## Skills Demonstrated
+## Screenshots
 
-- Detection Engineering
-- Windows Event Analysis
-- Wazuh SIEM
-- Sysmon
-- MITRE ATT&CK
-- Incident Investigation
-- Custom XML Rules
-- SOC Monitoring
+### Failed Logon Events
+
+![Failed Logons](images/brute-force-events.png)
+
+### Custom Detection Alert
+
+![Brute Force Alert](images/brute-force-alert.png)
 
 ---
 
-## Project Status
+## Repository Structure
 
-🚧 In Progress
+```
+images/
+reports/
+rules/
+README.md
+```
 
-More detection rules and attack simulations will be added.
+---
+
+## Future Improvements
+
+- PowerShell Detection
+- Administrator Group Monitoring
+- Account Creation Detection
+- Scheduled Task Detection
+- RDP Monitoring
+- Sysmon Detection Engineering
+
+---

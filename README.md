@@ -1,5 +1,15 @@
 #  SOC Homelab - Wazuh Detection Lab
 
+![Wazuh](https://img.shields.io/badge/Wazuh-4.12-blue)
+
+![Windows](https://img.shields.io/badge/Windows-10-blue)
+
+![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-orange)
+
+![Sysmon](https://img.shields.io/badge/Sysmon-Installed-success)
+
+![MITRE](https://img.shields.io/badge/MITRE-T1110-red)
+
 ## Overview
 
 This repository documents my hands-on SOC Homelab, built to practice detection engineering, security monitoring, and incident investigation using Wazuh.

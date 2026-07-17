@@ -19,36 +19,25 @@ Detect multiple failed Windows logon attempts using a custom Wazuh correlation r
 
 ## Attack Simulation
 
-Multiple failed logon attempts were generated using an invalid Windows account.
+Multiple failed Windows logon attempts were generated against a non-existent local account (hacker2) to simulate a brute force attack.
 
-Example:
-
-- Username: hacker2
-- Event ID: 4625
+Windows generated Security Event ID 4625 for each failed authentication attempt.
 
 ---
 
 ## Detection Logic
 
-A custom Wazuh rule was created to detect repeated failed logon events.
+A custom Wazuh correlation rule was created to detect repeated failed authentication attempts.
 
-Base Rule ID:
-60122
-
-Custom Rule:
-100101
-
-Frequency:
-5 Events
-
-Timeframe:
-60 Seconds
-
-Alert Level:
-12
-
-MITRE ATT&CK:
-T1110 – Brute Force
+| Item | Value |
+|------|------|
+| Base Rule | 60122 |
+| Custom Rule | 100101 |
+| Event ID | 4625 |
+| Frequency | 5 Events |
+| Timeframe | 60 Seconds |
+| Alert Level | 12 |
+| MITRE ATT&CK | T1110 - Brute Force |
 
 ---
 
@@ -78,16 +67,17 @@ Possible Brute Force Attack Detected
 
 ## Lessons Learned
 
-- Windows Event ID 4625 represents failed authentication attempts.
-- Wazuh correlation rules can detect repeated attack behavior.
-- Mapping detections to MITRE ATT&CK improves investigation.
-- Custom rules reduce analyst workload by highlighting suspicious activity.
-
+- Windows Security Event ID 4625 records failed authentication attempts.
+- Correlation rules help distinguish attack patterns from isolated events.
+- Mapping detections to MITRE ATT&CK provides valuable threat context.
+- Custom detection rules improve SOC visibility and reduce alert fatigue.
 ---
 
 ## Future Improvements
 
-- Email notifications
-- Active Response
-- Account Lockout Detection
-- Dashboard visualization
+- Configure Active Response
+- Send Email Notifications
+- Detect Password Spraying
+- Detect Account Lockout (Event ID 4740)
+- Integrate Sigma Rules
+- Build Detection Dashboard

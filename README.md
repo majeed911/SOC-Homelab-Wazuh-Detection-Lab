@@ -1,61 +1,73 @@
-# SOC Homelab - Wazuh Detection Lab
+#  SOC Homelab - Wazuh Detection Lab
 
 ## Overview
 
-This project demonstrates a SOC homelab built using Wazuh and Sysmon for Windows security monitoring.
+This repository documents my hands-on SOC Homelab, built to practice detection engineering, security monitoring, and incident investigation using Wazuh.
 
-The objective is to detect Windows brute-force login attempts by creating a custom Wazuh detection rule.
+The goal is to simulate real-world attack techniques, analyze Windows security events, and improve blue team investigation skills.
 
 ---
 
-## Lab Environment
+# Lab Architecture
 
-- Windows 10
+> *(Architecture diagram will be added soon)*
+
+```
+                 Attacker
+                    │
+                    ▼
+      Windows 10 + Sysmon + Wazuh Agent
+                    │
+                    ▼
+        Ubuntu Server (Wazuh Manager)
+                    │
+                    ▼
+             Wazuh Dashboard
+```
+
+---
+
+# Lab Environment
+
 - Ubuntu Server
-- Wazuh Manager
-- Wazuh Dashboard
+- Windows 10
+- Wazuh Manager 4.12
+- Wazuh Agent
 - Sysmon
 - VirtualBox
 
 ---
 
-## Attack Simulation
+#  Detection Scenarios
 
-The following attack was simulated:
+##  Brute Force Detection
 
-- Multiple failed Windows logon attempts (Event ID 4625)
-- Custom Wazuh rule triggered after repeated failures
-- High severity alert generated
+**Objective**
 
----
+Detect multiple failed Windows logon attempts using Wazuh.
 
-## Detection Logic
+**Windows Event ID**
 
-The custom rule detects:
+- 4625
 
-- Five failed logon events
-- Within sixty seconds
-- Generates a Level 12 alert
+**MITRE ATT&CK**
 
-MITRE ATT&CK
-
-- T1110 - Brute Force
+- T1110 – Brute Force
 
 ---
 
-## Screenshots
+## Upcoming Detection Labs
 
-### Failed Logon Events
-
-![Failed Logons](images/brute-force-events.png)
-
-### Custom Detection Alert
-
-![Brute Force Alert](images/brute-force-alert.png)
+- PowerShell spawning CMD
+- User added to Administrators
+- New Local User Created
+- Scheduled Task Creation
+- Windows Service Creation
+- RDP Logon Detection
 
 ---
 
-## Repository Structure
+#  Repository Structure
 
 ```
 images/
@@ -66,13 +78,16 @@ README.md
 
 ---
 
-## Future Improvements
+#  Learning Goals
 
-- PowerShell Detection
-- Administrator Group Monitoring
-- Account Creation Detection
-- Scheduled Task Detection
-- RDP Monitoring
-- Sysmon Detection Engineering
+- Detection Engineering
+- Windows Event Analysis
+- SOC Investigation
+- Threat Detection
+- MITRE ATT&CK
+- Wazuh
+- Sysmon
 
 ---
+
+⭐ This repository will continue to grow as I build new detection scenarios.

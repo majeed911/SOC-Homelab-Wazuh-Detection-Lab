@@ -1,4 +1,6 @@
-#  SOC Homelab - Wazuh Detection Lab
+# 🛡️ SOC Homelab - Wazuh Detection Lab
+
+Hands-on Detection Engineering & Security Monitoring using Wazuh, Sysmon, and Windows Event Logs.
 
 ![Wazuh](https://img.shields.io/badge/Wazuh-4.12-blue)
 
@@ -17,8 +19,6 @@ This repository documents my hands-on SOC Homelab, built to practice detection e
 The goal is to simulate real-world attack techniques, analyze Windows security events, and improve blue team investigation skills.
 
 ---
-
-# Lab Architecture
 
 ## 🏗️ Lab Architecture
 
@@ -39,7 +39,7 @@ E["⚔️ Attack Simulation"]
 
 ---
 
-# Lab Environment
+## 🖥️ Lab Environment
 
 - Ubuntu Server
 - Windows 10
@@ -60,7 +60,7 @@ E["⚔️ Attack Simulation"]
 - MITRE ATT&CK Mapping
 - Windows Security Monitoring
 
-#  Detection Scenarios
+## 🔍 Detection Scenarios
 
 ##  Brute Force Detection
 
@@ -85,29 +85,31 @@ Detect multiple failed Windows logon attempts using Wazuh.
 ![Failed Logons](images/brute-force-events)
 ---
 
-## Upcoming Detection Labs
+## 🚀 Upcoming Detection Labs
 
-- PowerShell spawning CMD
-- User added to Administrators
-- New Local User Created
-- Scheduled Task Creation
-- Windows Service Creation
-- RDP Logon Detection
-
----
-
-#  Repository Structure
-
-```
-images/
-reports/
-rules/
-README.md
-```
+- [x] Brute Force Detection
+- [ ] PowerShell → CMD Detection
+- [ ] User Added to Administrators
+- [ ] New Local User Detection
+- [ ] Scheduled Task Detection
+- [ ] Windows Service Creation
+- [ ] RDP Monitoring
 
 ---
 
-#  Learning Goals
+## 📂 Repository Structure
+
+```text
+SOC-Homelab-Wazuh-Detection-Lab
+│
+├── images/
+├── reports/
+├── rules/
+└── README.md
+```
+---
+
+## 🎯 Learning Goals
 
 - Detection Engineering
 - Windows Event Analysis

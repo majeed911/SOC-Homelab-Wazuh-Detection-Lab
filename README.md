@@ -56,9 +56,9 @@ Detect multiple failed Windows logon attempts using Wazuh.
 
 ![Brute Force Alert](images/brute-force-alert)
 
-## Failed Logon Events
+- ## Failed Logon Events
 
-![Failed Logons](images/brute-force-events)
+![Failed Logons](images/brute-force-events01)
 ---
 
 ## Upcoming Detection Labs

@@ -50,6 +50,16 @@ E["⚔️ Attack Simulation"]
 
 ---
 
+## 📊 Skills Demonstrated
+
+- SIEM Monitoring (Wazuh)
+- Windows Event Log Analysis
+- Sysmon Telemetry Analysis
+- Detection Engineering
+- Incident Investigation
+- MITRE ATT&CK Mapping
+- Windows Security Monitoring
+
 #  Detection Scenarios
 
 ##  Brute Force Detection

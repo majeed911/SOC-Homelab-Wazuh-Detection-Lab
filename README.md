@@ -10,8 +10,6 @@ The goal is to simulate real-world attack techniques, analyze Windows security e
 
 # Lab Architecture
 
-> *(Architecture diagram will be added soon)*
-
 ```
                  Attacker
                     │

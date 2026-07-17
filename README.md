@@ -10,17 +10,21 @@ The goal is to simulate real-world attack techniques, analyze Windows security e
 
 # Lab Architecture
 
-```
-                 Attacker
-                    │
-                    ▼
-      Windows 10 + Sysmon + Wazuh Agent
-                    │
-                    ▼
-        Ubuntu Server (Wazuh Manager)
-                    │
-                    ▼
-             Wazuh Dashboard
+## 🏗️ Lab Architecture
+
+```mermaid
+flowchart LR
+
+A["🖥️ Windows 10 Endpoint<br/>Sysmon + Wazuh Agent"]
+--> B["🛡️ Wazuh Manager<br/>Ubuntu Server"]
+
+B --> C["📊 Wazuh Dashboard"]
+
+D["👤 Security Analyst"]
+--> C
+
+E["⚔️ Attack Simulation"]
+--> A
 ```
 
 ---

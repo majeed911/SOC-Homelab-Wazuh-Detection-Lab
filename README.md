@@ -85,15 +85,6 @@ Detect multiple failed Windows logon attempts using Wazuh.
 ![Failed Logons](images/brute-force-events)
 ---
 
-## 🚀 Upcoming Detection Labs
-
-- [x] Brute Force Detection
-- [ ] PowerShell → CMD Detection
-- [ ] User Added to Administrators
-- [ ] New Local User Detection
-- [ ] Scheduled Task Detection
-- [ ] Windows Service Creation
-- [ ] RDP Monitoring
 
 ---
 

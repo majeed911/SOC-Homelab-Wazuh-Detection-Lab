@@ -66,7 +66,7 @@ The custom Wazuh rule matched this behavior and generated the alert:
 
 ### Detection Alert
 
-![PowerShell CMD Alert](../images/powershell-cmd-alert.)
+![PowerShell CMD Alert](../images/powershell-cmd-alert)
 
 ---
 
